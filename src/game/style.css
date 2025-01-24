@@ -2,6 +2,8 @@
     position: relative;
     width: 3920px;
     height: 100%;
+    transform-origin: left top;
+    transform: scale(1.85) translateX(-430px);
 }
 
 .game-container__bg {
@@ -26,6 +28,8 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    transform-origin: center;
+    transform: scale(0);
 }
 
 .game__bacteria_1 {
