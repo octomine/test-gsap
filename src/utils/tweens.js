@@ -15,6 +15,15 @@ export const buttonAppear = (target) =>
 export const buttonDisappear = (target) =>
   gsap.to(target, { scale: 0, duration: 0.3, ease: "elastic.out" });
 
+export const bacteriaAppear = (target, onComplete) =>
+  gsap.to(target, {
+    opacity: 1,
+    scale: 1,
+    duration: 0.3,
+    ease: "sine.out",
+    onComplete,
+  });
+
 export const bacteriaLoop = (target) =>
   gsap
     .to(target, { y: -40, duration: 3, ease: "sine.inOut" })
