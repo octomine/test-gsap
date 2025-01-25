@@ -1,0 +1,108 @@
+#final {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    opacity: 0;
+    background: url('/assets/final-bg.png') center no-repeat;
+}
+
+.final__animation-holder {
+    padding-top: 150px;
+    width: 980px;
+}
+
+.final__success,
+.final__fail {
+    display: none;
+}
+
+/* final-success */
+.final__success-text-1 {
+    background-image: url('/assets/final-success-text-1.png');
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    width: 0;
+    height: 78px;
+}
+
+.final__success-text-2 {
+    background-image: url('/assets/final-success-text-2.png');
+    background-repeat: no-repeat;
+    background-position-x: 0;
+}
+
+.final__success-text-2_line-1 {
+    height: 100px;
+    width: 0;
+}
+
+.final__success-text-2_line-2 {
+    background-position-y: -100px;
+    height: 100px;
+    width: 0;
+}
+
+.final__success-text-3 {
+    background-image: url('/assets/final-success-text-3.png');
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    width: 0;
+    height: 52px;
+}
+
+/* final-fail */
+.final__fail-text-1 {
+    background-image: url('/assets/final-fail-text-1.png');
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    width: 0;
+    height: 85px;
+}
+
+.final__fail-text-1_line-1 {
+    height: 42px;
+    width: 0;
+}
+
+.final__fail-text-1_line-2 {
+    background-position-y: -42px;
+    height: 76px;
+    width: 0;
+}
+
+.final__fail-text-2 {
+    background-image: url('/assets/final-fail-text-2.png');
+    background-repeat: no-repeat;
+    background-position-x: 0;
+}
+
+.final__fail-text-2_line-1 {
+    height: 76px;
+    width: 0;
+}
+
+.final__fail-text-2_line-2 {
+    background-position-y: -76px;
+    height: 80px;
+    width: 0;
+}
+
+.final__fail-text-3 {
+    background-image: url('/assets/final-fail-text-3.png');
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    width: 0;
+    height: 52px;
+}
+
+.final__button {
+    margin-top: 48px;
+    width: 535px;
+    height: 150px;
+    border-radius: 20px;
+    background: #D21A23 url('/assets/final-button-label.png') no-repeat center;
+    transform: scale(0);
+    transform-origin: center;
+}

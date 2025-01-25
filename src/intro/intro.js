@@ -20,18 +20,7 @@ const TEXTS = [
 
 export const showIntro = () => {
   const timeline = showText(TEXTS)
-    .add(
-      buttonAppear(".intro__button").then((tween) => {
-        handleClick(
-          tween.targets()[0],
-          () => {
-            timeline.play();
-          },
-          false
-        );
-      }),
-      "<0.3"
-    )
+    .add(buttonAppear(".intro__button"), "<0.3")
     .addPause()
     .addLabel("wait")
     .add(buttonDisappear(".intro__button"))
@@ -44,6 +33,14 @@ export const showIntro = () => {
   hideText(TEXTS.reverse(), timeline, "wait").set("#intro", {
     display: "none",
   });
+
+  handleClick(
+    timeline.getTweensOf(".intro__button")[0].targets()[0],
+    () => {
+      timeline.play();
+    },
+    false
+  );
 
   return timeline;
 };
