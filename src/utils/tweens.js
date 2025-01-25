@@ -15,20 +15,22 @@ export const buttonAppear = (target) =>
 export const buttonDisappear = (target) =>
   gsap.to(target, { scale: 0, duration: 0.3, ease: "elastic.out" });
 
-export const bacteriaAppear = (target, onComplete) =>
+export const bacteriaAppear = (target, handlers) =>
   gsap.to(target, {
     opacity: 1,
     scale: 1,
     duration: 0.3,
     ease: "sine.out",
-    onComplete,
+    ...handlers,
   });
 
+const loopDuration = 3;
 export const bacteriaLoop = (target) =>
   gsap
-    .to(target, { y: -40, duration: 3, ease: "sine.inOut" })
+    .to(target, { y: -40, duration: loopDuration, ease: "sine.inOut" })
     .yoyo(true)
-    .repeat(-1);
+    .repeat(-1)
+    .play(Math.random() * loopDuration);
 
 export const bacteriaDisappear = (target, onComplete) =>
   gsap.to(target, {

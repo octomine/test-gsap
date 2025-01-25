@@ -90,6 +90,7 @@
 
 /* ui */
 .game__ui-wrapper {
+    pointer-events: none;
     position: relative;
     top: -100%;
     display: flex;
@@ -133,6 +134,7 @@
     height: 36px;
     border: 3px solid #FFFFFF;
     border-radius: 18px;
+    transform-origin: center;
 }
 
 .game__time-progress {
