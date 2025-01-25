@@ -1,6 +1,11 @@
 import gsap from "gsap";
 import { Timeline } from "gsap/gsap-core";
-import { bacteriaAppear, bacteriaDisappear, bacteriaLoop } from "../utils";
+import {
+  bacteriaAppear,
+  bacteriaDisappear,
+  bacteriaLoop,
+  handleClick,
+} from "../utils";
 import "./style.css";
 
 const FULL_TIME = 10;
@@ -9,30 +14,19 @@ let cleaned = 0;
 
 const timeline = new Timeline();
 
-const handleClick = (bacteria, callBack) => {
-  function clickHandler() {
-    bacteria.removeEventListener("click", clickHandler);
-
-    gsap.killTweensOf(bacteria);
-    bacteriaDisappear(bacteria);
-
-    cleaned++;
-    if (callBack) {
-      callBack();
-    }
-  }
-
-  bacteria.addEventListener("click", clickHandler);
-};
-
-const checkLast = () => {
+const checkLast = (bacteria) => {
+  bacteriaDisappear(bacteria);
+  cleaned++;
   if (cleaned >= TO_CLEAN) {
     timeline.kill();
 
     gsap.set(".game__time-bar", { opacity: 0 });
     gsap
       .to(".game__time-bar", { opacity: 1, duration: 0.15, ease: "none" })
-      .repeat(3);
+      .repeat(3)
+      .then(() => {
+        console.log("WIN!!1");
+      });
   }
 };
 
@@ -46,7 +40,9 @@ export const startGame = () => {
     .yoyo(true)
     .repeat(-1);
 
-  handleClick(bacteriaLoop(".game__bacteria_1").targets()[0], () => {
+  handleClick(bacteriaLoop(".game__bacteria_1").targets()[0], (bacteria) => {
+    bacteriaDisappear(bacteria);
+    cleaned++;
     arrowLoop.kill();
     timeline.play();
   });
@@ -88,22 +84,13 @@ export const startGame = () => {
   }
   timeline
     .add(
-      [
-        gsap.to(".game__time-progress", {
-          backgroundColor: "red",
-          duration: 0.1,
-        }),
-        gsap
-          .to(".game__time-bar", {
-            scale: 1.2,
-            duration: 0.2,
-            ease: "elastic.out",
-          })
-          .yoyo(true),
-      ],
+      gsap.to(".game__time-progress", {
+        backgroundColor: "red",
+        duration: 0.1,
+      }),
       "-=0.75"
     )
     .then(() => {
       console.log("!!!");
-    })    
+    });
 };

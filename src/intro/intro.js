@@ -1,11 +1,10 @@
-import gsap from "gsap";
-import { startGame } from "../game/game";
 import {
   buttonAppear,
   buttonDisappear,
   hideText,
   showText,
   fadeOut,
+  handleClick,
 } from "../utils";
 import "./style.css";
 
@@ -20,30 +19,31 @@ const TEXTS = [
 ];
 
 export const showIntro = () => {
-  showText(TEXTS)
-    .add(buttonAppear(".intro__button"), TEXTS.length * 0.3)
-    .then((timeline) => {
-      timeline.kill();
+  const timeline = showText(TEXTS)
+    .add(
+      buttonAppear(".intro__button").then((tween) => {
+        handleClick(
+          tween.targets()[0],
+          () => {
+            timeline.play();
+          },
+          false
+        );
+      }),
+      "<0.3"
+    )
+    .addPause()
+    .addLabel("wait")
+    .add(buttonDisappear(".intro__button"))
+    .add(fadeOut("#intro", 1), "wait+=0.3")
+    .to(
+      ".game-container",
+      { scale: 1, x: 0, duration: 0.7, ease: "sine.out" },
+      "wait+=0.8"
+    );
+  hideText(TEXTS.reverse(), timeline, "wait").set("#intro", {
+    display: "none",
+  });
 
-      const button = timeline.getTweensOf(".intro__button")[0].targets()[0];
-      function clickHandler() {
-        button.removeEventListener("click", clickHandler);
-        hideText(TEXTS.reverse(), 0.3)
-          .to(
-            ".game-container",
-            { scale: 1, x: 0, duration: 0.7, ease: "sine.out" },
-            0.8
-          )
-          .add(fadeOut("#intro", 1), 0.3)
-          .add(buttonDisappear(".intro__button"), 0)
-          .then((timeline) => {
-            timeline.kill();
-            gsap.set("#intro", { display: "none" });
-
-            startGame();
-          });
-      }
-
-      button.addEventListener("click", clickHandler);
-    });
+  return timeline;
 };

@@ -1,8 +1,8 @@
 import { Timeline } from "gsap/gsap-core";
 import { textAppear, textDisappear } from "./tweens";
 
-export const showText = (data) => {
-  const tl = new Timeline();
+export const showText = (data, timeline) => {
+  const tl = timeline ?? new Timeline();
 
   var l = data.length;
   for (let i = 0; i < l; i++) {
@@ -12,12 +12,13 @@ export const showText = (data) => {
   return tl;
 };
 
-export const hideText = (data, offset = 0) => {
-  const tl = new Timeline();
+export const hideText = (data, timeline, label) => {
+  const tl = timeline ?? new Timeline();
 
   var l = data.length;
   for (let i = 0; i < l; i++) {
-    tl.add(textDisappear(data[i]), offset + i * 0.1);
+    const position = label ? `${label}+=${i * 0.1}` : i * 0.1;
+    tl.add(textDisappear(data[i]), position);
   }
 
   return tl;

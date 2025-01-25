@@ -1,9 +1,8 @@
 import "./style.css";
 
-import "./intro/intro";
-import "./game/game";
-import { showIntro } from "./intro/intro";
+import { showIntro } from "./intro";
+import { startGame } from "./game";
 
 document.addEventListener("DOMContentLoaded", () => {
-  showIntro();
+  showIntro().then(() => startGame());
 });
