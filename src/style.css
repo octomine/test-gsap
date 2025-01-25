@@ -16,8 +16,7 @@ body {
   position: relative;
   aspect-ratio: 4/3;
   max-width: 1440px;
-  margin: auto;
-  background: pink;
+  margin: auto;  
   overflow: hidden;
 }
 
@@ -32,4 +31,55 @@ body {
   #content {
     aspect-ratio: 16/9;
   }
+}
+
+.bacteria {
+  position: absolute;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center;
+  transform: scale(0);
+}
+
+.bacteria_1 {
+  width: 272px;
+  height: 272px;
+  background-image: url('/assets/bacteria-4.png');
+}
+
+.bacteria_2 {
+  width: 209px;
+  height: 209px;
+  background-image: url('/assets/bacteria-2.png');
+}
+
+.bacteria_3 {
+  width: 214px;
+  height: 214px;
+  background-image: url('/assets/bacteria-3.png');
+}
+
+.bacteria_4 {
+  width: 247px;
+  height: 192px;
+  background-image: url('/assets/bacteria-1.png');
+}
+
+.bacteria_5 {
+  width: 264px;
+  height: 262px;
+  background-image: url('/assets/bacteria-5.png');
+}
+
+.bacteria_6 {
+  width: 192px;
+  height: 210px;
+  background-image: url('/assets/bacteria-4.png');
+}
+
+.bacteria_7 {
+  width: 285px;
+  height: 285px;
+  background-image: url('/assets/bacteria-6.png');
 }

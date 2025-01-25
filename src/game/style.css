@@ -23,69 +23,39 @@
     background-image: url('/assets/bg-dirty.png');
 }
 
-.game__bacteria {
-    position: absolute;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    transform-origin: center;
-    transform: scale(0);
-}
-
 .game__bacteria_1 {
     top: 250px;
     left: 0;
-    width: 272px;
-    height: 272px;
-    background-image: url('/assets/bacteria-4.png');
 }
 
 .game__bacteria_2 {
     top: 400px;
     left: 300px;
-    width: 209px;
-    height: 209px;
-    background-image: url('/assets/bacteria-2.png');
 }
 
 .game__bacteria_3 {
     top: 50px;
     left: 480px;
-    width: 214px;
-    height: 214px;
-    background-image: url('/assets/bacteria-3.png');
 }
 
 .game__bacteria_4 {
     top: 150px;
     left: 870px;
-    width: 247px;
-    height: 192px;
-    background-image: url('/assets/bacteria-1.png');
 }
 
 .game__bacteria_5 {
     top: 250px;
     left: 1100px;
-    width: 264px;
-    height: 262px;
-    background-image: url('/assets/bacteria-5.png');
 }
 
 .game__bacteria_6 {
     top: 105px;
     left: 1520px;
-    width: 192px;
-    height: 210px;
-    background-image: url('/assets/bacteria-4.png');
 }
 
 .game__bacteria_7 {
     top: 300px;
     left: 1800px;
-    width: 285px;
-    height: 285px;
-    background-image: url('/assets/bacteria-6.png');
 }
 
 /* ui */

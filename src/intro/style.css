@@ -6,6 +6,32 @@
     background: linear-gradient(90deg, #006822 0%, rgba(0, 104, 34, 0) 100%);
 }
 
+.intro__bacteria-holder {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 531px;
+    overflow: hidden;
+}
+
+.intro__bacteria_1 {
+    top: 320px;
+    left: 800px;
+    transform: scale(1);
+}
+
+.intro__bacteria_2 {
+    top: 230px;
+    left: 630px;
+    transform: scale(1);
+}
+
+.intro__bacteria_3 {
+    top: 100px;
+    left: 830px;
+    transform: scale(1);
+}
+
 .intro__animation-holder {
     width: 980px;
 }
