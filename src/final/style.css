@@ -5,7 +5,13 @@
     justify-content: center;
     height: 100%;
     opacity: 0;
-    background: url('/assets/final-bg.png') center no-repeat;
+    background: linear-gradient(60deg,
+            rgba(0, 69, 47, 0.17) 0%,
+            rgba(0, 69, 47, 0.81) 20%,
+            rgba(0, 69, 47, 0.13) 48%,
+            rgba(0, 69, 47, 0.87) 75%,
+            rgba(0, 69, 47, 0.2) 100%),
+        url('/assets/tile.svg') center;
 }
 
 .final__animation-holder {
