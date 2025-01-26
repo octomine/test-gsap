@@ -23,5 +23,7 @@ export const showFinal = (success) => {
   gsap.set(`.final__${success ? "success" : "fail"}`, { display: "block" });
   showText(success ? SUCCESS : FAIL)
     .to("#final", { opacity: 1, duration: 0.5 }, 0)
-    .add(buttonAppear(".final__button"));
+    .to(".spray", { scale: 1, duration: 0.3, ease: "sine.out" }, 0.3)
+    .add(buttonAppear(".final__button"))
+    .to(".final__foam", { y: 0, duration: 1.5, ease: "sine.out" }, 0);
 };

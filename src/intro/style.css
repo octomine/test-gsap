@@ -3,20 +3,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg, #006822 0%, rgba(0, 104, 34, 0) 100%);
+    background: linear-gradient(90deg, #006822 0%, rgba(0, 104, 34, 0) 100%),
+        linear-gradient(0deg, rgba(225, 221, 220, 0) 78%, #E1DDDC 90%);
 }
 
 .intro__bacteria-holder {
     position: absolute;
     top: 0;
-    width: 980px;
+    width: 1080px;
     height: 621px;
     overflow: hidden;
 }
 
 .intro__bacteria_1 {
     top: 430px;
-    left: 75%;    
+    left: 75%;
 }
 
 .intro__bacteria_2 {

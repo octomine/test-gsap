@@ -51,6 +51,7 @@ export const startGame = () =>
       .addPause()
       .to(".game__message", { opacity: 0, duration: 0.3 })
       .to(".game__time-bar", { y: -75, duration: 0.5, ease: "sine.out" })
+      .to(".spray", { x: 0, y: 0, rotate: 0, duratoin: 0.3, ease: "sine.out" })
       .add([
         gsap.to(".game-container", {
           x: -1000,
@@ -69,7 +70,7 @@ export const startGame = () =>
       timeline.add(bacteriaAppear(target), position);
       handleClick(bacteriaLoop(target).targets()[0], (bacteria) => {
         const dirt = target.replace("game__bacteria_", "dirt-");
-        fadeOut(dirt, .3)
+        fadeOut(dirt, 0.3);
         bacteriaDisappear(bacteria);
         cleaned++;
         if (cleaned >= TO_CLEAN) {

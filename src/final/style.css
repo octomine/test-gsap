@@ -14,6 +14,15 @@
         url('/assets/tile.svg') center;
 }
 
+.final__foam {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 312px;
+    background: url('/assets/final-foam.png') no-repeat center;
+    transform: translateY(-312px)
+}
+
 .final__animation-holder {
     padding-top: 150px;
     width: 980px;

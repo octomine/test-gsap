@@ -23,6 +23,12 @@ const TEXTS = [
 ];
 
 export const showIntro = () => {
+  const d = 1440 - 1080;
+  const w = document.getElementById("content").clientWidth - 1080;
+  const x = -(1000 - (w / d) * 200);
+  console.log(x);
+  gsap.set(".game-container", { x: x });
+
   bacteriaLoopIntro(".intro__bacteria_1");
   bacteriaLoopIntro(".intro__bacteria_2");
   bacteriaLoopIntro(".intro__bacteria_3");
@@ -56,7 +62,7 @@ export const showIntro = () => {
     .add(fadeOut("#intro", 1), "wait+=0.3")
     .to(
       ".game-container",
-      { scale: 1, x: 0, duration: 0.7, ease: "sine.out" },
+      { scale: 1, x: 0, y: 0, duration: 0.7, ease: "sine.out" },
       "wait+=0.8"
     );
   hideText(TEXTS.reverse(), timeline, "wait").set("#intro", {

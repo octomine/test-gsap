@@ -1,18 +1,17 @@
 .game-container {
     position: relative;
-    width: 3920px;
+    width: 100%;
     height: 100%;
     transform-origin: left top;
-    transform: scale(1.85) translateX(-430px);
+    transform: scale(2) translate(-500px, 25px);
 }
 
 .game-container__bg {
     position: absolute;
     top: 0;
-    width: 100%;
+    width: 2504px;
     height: 100%;
     background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .game-container__bg_clear {
@@ -186,7 +185,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: inherit;
+    height: inherit;    
 }
 
 .game__message {

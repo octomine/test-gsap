@@ -86,3 +86,23 @@ body {
   height: 285px;
   background-image: url('/assets/bacteria-6.png');
 }
+
+.spray-holder {
+  pointer-events: none;
+  position: relative;
+  margin: 0 auto;
+  width: 1080px;
+  height: 100%;
+}
+
+.spray {
+  position: absolute;
+  right: 0;
+  bottom: 17px;
+  width: 371px;
+  height: 749px;
+  background: url('/assets/spray.png') center no-repeat;
+  transform-origin: right bottom;
+  transform: scale(.38) translateX(415px);
+  rotate: 90deg;
+}
