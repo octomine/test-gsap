@@ -3,7 +3,13 @@
     width: 100%;
     height: 100%;
     transform-origin: left top;
-    transform: scale(2) translate(-500px, 25px);
+    transform: scale(2) translate(-400px, 25px);
+}
+
+@media screen and (width < 1332px) {
+    .game-container {
+        transform: scale(2) translate(-500px, 25px);
+    }
 }
 
 .game-container__bg {
@@ -198,6 +204,12 @@
     background: #006822CC;
     border-radius: 0;
     backdrop-filter: blur(10px);
+}
+
+@media screen and (width<1332px) {   
+    .game__message {
+        margin-left: 200px;
+    }
 }
 
 .game__message-text {
