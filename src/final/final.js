@@ -29,12 +29,12 @@ export const showFinal = (success) => {
     .to(".final__foam", { y: 0, duration: 1.5, ease: "sine.out" }, 0.6)
     .add(
       [
-        gsap.to(".star", { rotate: 720, duration: 0.6 }),
+        gsap.to(".star", { rotate: 380, duration: 0.8 }),
         gsap
-          .to(".star", { scale: 1, duration: 0.3, ease: "back.inOut" })
+          .to(".star", { scale: 1, duration: 0.4, ease: "exp.out" })
           .repeat(1),
       ],
       "star"
     )
-    .to(".star", { scale: 0, duration: 0.3, ease: "sine.inOut" }, "star+=0.3");
+    .to(".star", { scale: 0, duration: 0.4, ease: "sine.in" }, "star+=0.4");
 };
