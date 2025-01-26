@@ -4,6 +4,7 @@ import {
   bacteriaAppear,
   bacteriaDisappear,
   bacteriaLoop,
+  fadeOut,
   handleClick,
 } from "../utils";
 import "./style.css";
@@ -27,6 +28,7 @@ export const startGame = () =>
 
     handleClick(bacteriaLoop(".game__bacteria_1").targets()[0], (bacteria) => {
       bacteriaDisappear(bacteria);
+      fadeOut(".dirt-1", 0.5);
       cleaned++;
       arrowLoop.kill();
       timeline.play();
@@ -66,6 +68,8 @@ export const startGame = () =>
       const position = `<${i === 2 ? "" : 1.5}`;
       timeline.add(bacteriaAppear(target), position);
       handleClick(bacteriaLoop(target).targets()[0], (bacteria) => {
+        const dirt = target.replace("game__bacteria_", "dirt-");
+        fadeOut(dirt, .3)
         bacteriaDisappear(bacteria);
         cleaned++;
         if (cleaned >= TO_CLEAN) {
