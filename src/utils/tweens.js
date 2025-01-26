@@ -32,6 +32,20 @@ export const bacteriaLoop = (target) =>
     .repeat(-1)
     .play(Math.random() * loopDuration);
 
+export const bacteriaLoopIntro = (target) => {
+  gsap.set(target, { rotate: -10 });
+  return gsap
+    .to(target, {
+      rotate: 10,
+      y: -10,
+      duration: loopDuration,
+      ease: "sine.inOut",
+    })
+    .yoyo(true)
+    .repeat(-1)
+    .play(Math.random() * loopDuration);
+};
+
 export const bacteriaDisappear = (target, onComplete) =>
   gsap.to(target, {
     opacity: 0,

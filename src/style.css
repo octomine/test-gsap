@@ -16,8 +16,11 @@ body {
   position: relative;
   aspect-ratio: 4/3;
   max-width: 1440px;
-  margin: auto;  
+  max-height: 810px;
+  margin: auto;
   overflow: hidden;
+  width: 100%;
+  transform-origin: left top;
 }
 
 .pa {
@@ -27,9 +30,9 @@ body {
   width: 100%;
 }
 
-@media screen and (width > 1080px) {
+@media screen and (width < 1080px) {
   #content {
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/3;
   }
 }
 

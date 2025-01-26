@@ -1,3 +1,4 @@
+import gsap from "gsap";
 import {
   buttonAppear,
   buttonDisappear,
@@ -5,6 +6,9 @@ import {
   showText,
   fadeOut,
   handleClick,
+  bacteriaAppear,
+  bacteriaLoopIntro,
+  bacteriaDisappear,
 } from "../utils";
 import "./style.css";
 
@@ -19,11 +23,36 @@ const TEXTS = [
 ];
 
 export const showIntro = () => {
+  bacteriaLoopIntro(".intro__bacteria_1");
+  bacteriaLoopIntro(".intro__bacteria_2");
+  bacteriaLoopIntro(".intro__bacteria_3");
+
   const timeline = showText(TEXTS)
-    .add(buttonAppear(".intro__button"), "<0.3")
+    .add(bacteriaAppear(".intro__bacteria_1"), 0)
+    .add(bacteriaAppear(".intro__bacteria_2"), 0.3)
+    .add(bacteriaAppear(".intro__bacteria_3"), 0.5)
+    .add(buttonAppear(".intro__button"), "-=0.3")
     .addPause()
     .addLabel("wait")
     .add(buttonDisappear(".intro__button"))
+    .add(
+      bacteriaDisappear(".intro__bacteria_1", () => {
+        gsap.killTweensOf(".intro__bacteria_1");
+      }),
+      "wait"
+    )
+    .add(
+      bacteriaDisappear(".intro__bacteria_2", () => {
+        gsap.killTweensOf(".intro__bacteria_2");
+      }),
+      "wait+=0.3"
+    )
+    .add(
+      bacteriaDisappear(".intro__bacteria_3", () => {
+        gsap.killTweensOf(".intro__bacteria_3");
+      }),
+      "wait+=0.5"
+    )
     .add(fadeOut("#intro", 1), "wait+=0.3")
     .to(
       ".game-container",
