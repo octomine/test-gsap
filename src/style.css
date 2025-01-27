@@ -106,3 +106,20 @@ body {
   transform: scale(.38) translateX(415px);
   rotate: 90deg;
 }
+
+.foam {
+  position: absolute;
+  width: 338px;
+  height: 390px;
+  background: url('/assets/foam.png') center no-repeat;
+  transform-origin: center;
+}
+
+.star {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  transform-origin: center;
+  transform: scale(0);
+  background: url('/assets/star.svg');
+}

@@ -6,6 +6,10 @@ import {
   bacteriaLoop,
   fadeOut,
   handleClick,
+  addElementTo,
+  getCenter,
+  showFoam,
+  starShine,
 } from "../utils";
 import "./style.css";
 
@@ -27,6 +31,7 @@ export const startGame = () =>
       .repeat(-1);
 
     handleClick(bacteriaLoop(".game__bacteria_1").targets()[0], (bacteria) => {
+      showFoam(addElementTo("foam", "game-container", getCenter(bacteria)));
       bacteriaDisappear(bacteria);
       fadeOut(".dirt-1", 0.5);
       cleaned++;
@@ -51,7 +56,7 @@ export const startGame = () =>
       .addPause()
       .to(".game__message", { opacity: 0, duration: 0.3 })
       .to(".game__time-bar", { y: -75, duration: 0.5, ease: "sine.out" })
-      .to(".spray", { x: 0, y: 0, rotate: 0, duratoin: 0.3, ease: "sine.out" })
+      .to(".spray", { x: 0, y: 0, rotate: 0, duration: 0.3, ease: "sine.out" })
       .add([
         gsap.to(".game-container", {
           x: -1000,
@@ -69,6 +74,9 @@ export const startGame = () =>
       const position = `<${i === 2 ? "" : 1.5}`;
       timeline.add(bacteriaAppear(target), position);
       handleClick(bacteriaLoop(target).targets()[0], (bacteria) => {
+        showFoam(addElementTo("foam", "game-container", getCenter(bacteria)));
+        starShine(addElementTo("star", "game-container", getCenter(bacteria)), .8);
+
         const dirt = target.replace("game__bacteria_", "dirt-");
         fadeOut(dirt, 0.3);
         bacteriaDisappear(bacteria);
@@ -95,6 +103,7 @@ export const startGame = () =>
         "-=0.75"
       )
       .then(() => {
+        timeline.kill();
         resolve(false);
       });
   });

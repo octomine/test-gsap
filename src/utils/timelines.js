@@ -23,3 +23,24 @@ export const hideText = (data, timeline, label) => {
 
   return tl;
 };
+
+export const showFoam = (target, callBack) =>
+  new Timeline()
+    .set(target, { scale: 0 })
+    .to(target, { scale: 1, duration: 0.1, ease: "exp.in" })
+    .to(target, { y: 300, opacity: 0, duration: 1, ease: "sine.out" })
+    .then((timeline) => {
+      timeline.kill();
+      target.offsetParent.removeChild(target);
+      callBack();
+    });
+
+export const starShine = (target, offset = 0) =>
+  new Timeline()
+    .to(target, { rotate: 380, duration: 0.8 }, offset)
+    .to(target, { scale: 1, duration: 0.4, ease: "exp.out" }, offset)
+    .to(target, { scale: 0, duration: 0.4, ease: "sine.in" }, ">")
+    .then((timeline) => {
+      timeline.kill();
+      target.offsetParent.removeChild(target);
+    });

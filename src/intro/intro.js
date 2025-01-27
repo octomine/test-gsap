@@ -23,12 +23,6 @@ const TEXTS = [
 ];
 
 export const showIntro = () => {
-  // const d = 1440 - 1080;
-  // const w = document.getElementById("content").clientWidth - 1080;
-  // const x = -(1000 - (w / d) * 200);
-  // console.log(x);
-  // gsap.set(".game-container", { x: x });
-
   bacteriaLoopIntro(".intro__bacteria_1");
   bacteriaLoopIntro(".intro__bacteria_2");
   bacteriaLoopIntro(".intro__bacteria_3");

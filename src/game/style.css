@@ -148,6 +148,11 @@
     background: url('/assets/dirt-7-1.jpg') center no-repeat;
 }
 
+.game__bacteria-holder {
+    position: absolute;
+    overflow: hidden;
+}
+
 .game__bacteria_1 {
     top: 250px;
     left: 0;
@@ -163,6 +168,13 @@
     left: 480px;
 }
 
+.game__bacteria-holder_4 {
+    top: 150px;
+    left: 870px;
+    width: 247px;
+    height: 137px;
+}
+
 .game__bacteria_4 {
     top: 150px;
     left: 870px;
@@ -171,6 +183,13 @@
 .game__bacteria_5 {
     top: 250px;
     left: 1100px;
+}
+
+.game__bacteria-holder_6 {
+    top: 105px;
+    left: 1520px;
+    width: 192px;
+    height: 210px;
 }
 
 .game__bacteria_6 {
@@ -191,7 +210,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: inherit;    
+    height: inherit;
 }
 
 .game__message {
@@ -206,7 +225,7 @@
     backdrop-filter: blur(10px);
 }
 
-@media screen and (width<1332px) {   
+@media screen and (width<1332px) {
     .game__message {
         margin-left: 200px;
     }

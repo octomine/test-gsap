@@ -34,17 +34,6 @@
     display: none;
 }
 
-.star {
-    position: absolute;
-    top: 260px;
-    left: 480px;
-    width: 110px;
-    height: 110px;
-    transform-origin: center;
-    transform: scale(0);
-    background: url('/assets/star.svg');
-}
-
 /* final-success */
 .final__success-text-1 {
     background-image: url('/assets/final-success-text-1.png');
