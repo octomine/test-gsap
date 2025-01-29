@@ -34,14 +34,24 @@
     width: 980px;
 }
 
-.intro__text-2-highlight {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 34px;
-    width: 420px;
-    height: 75px;
-    background: #00402B;
+.intro__text-1,
+.intro__text-2,
+.intro__text-3,
+.intro__text-4,
+.intro__text-5,
+.intro__text-6 {
+    padding: 0 15px;
+    width: fit-content;
+    transform: translateX(100%);
+}
+
+.intro__text-highlight {
+    padding: 6px 0 7px;
+    margin-bottom: 34px; 
+    background-image: linear-gradient(#00402B, #00402B);
+    background-repeat: no-repeat;
+    background-size: 0;
+    background-position-x: 100%;
 }
 
 .intro__button {

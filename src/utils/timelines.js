@@ -7,6 +7,7 @@ export const showText = (data, timeline) => {
   var l = data.length;
   for (let i = 0; i < l; i++) {
     tl.add(textAppear(data[i]), i * 0.3);
+    tl.add(textAppear(`${data[i]}-mask`), i * 0.3);
   }
 
   return tl;
@@ -32,7 +33,9 @@ export const showFoam = (target, callBack) =>
     .then((timeline) => {
       timeline.kill();
       target.offsetParent.removeChild(target);
-      callBack();
+      if (callBack) {
+        callBack();
+      }
     });
 
 export const starShine = (target, offset = 0) =>

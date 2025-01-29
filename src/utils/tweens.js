@@ -3,10 +3,10 @@ import gsap from "gsap";
 export const fadeOut = (target, duration) =>
   gsap.to(target, { opacity: 0, duration });
 
-export const textAppear = ({ target, width }) =>
-  gsap.to(target, { width, duration: 0.5, ease: "sine.out" });
+export const textAppear = (target) =>
+  gsap.to(target, { x: 0, duration: 0.5, ease: "sine.out" });
 
-export const textDisappear = ({ target }) =>
+export const textDisappear = (target) =>
   gsap.to(target, { opacity: 0, duration: 0.3 });
 
 export const buttonAppear = (target) =>

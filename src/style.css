@@ -126,6 +126,7 @@ body {
 }
 
 .txt {
+  font-family: 'Gotham Pro';
   color: white;
 }
 
@@ -143,4 +144,6 @@ body {
 
 .mask {
   overflow: hidden;
+  width: fit-content;
+  transform: translateX(-100%);
 }

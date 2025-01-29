@@ -4,18 +4,18 @@ import "./style.css";
 import { addElementTo, buttonAppear, showText, starShine } from "../utils";
 
 const SUCCESS = [
-  { target: ".final__success-text-1", width: 550 },
-  { target: ".final__success-text-2_line-1", width: 550 },
-  { target: ".final__success-text-2_line-2", width: 550 },
-  { target: ".final__success-text-3", width: 550 },
+  ".final__success-text-1",
+  ".final__success-text-2_line-1",
+  ".final__success-text-2_line-2",
+  ".final__success-text-3",
 ];
 
 const FAIL = [
-  { target: ".final__fail-text-1_line-1", width: 550 },
-  { target: ".final__fail-text-1_line-2", width: 550 },
-  { target: ".final__fail-text-2_line-1", width: 550 },
-  { target: ".final__fail-text-2_line-2", width: 712 },
-  { target: ".final__fail-text-3", width: 550 },
+  ".final__fail-text-1_line-1",
+  ".final__fail-text-1_line-2",
+  ".final__fail-text-2_line-1",
+  ".final__fail-text-2_line-2",
+  ".final__fail-text-3",
 ];
 
 export const showFinal = (success) => {

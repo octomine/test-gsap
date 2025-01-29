@@ -13,13 +13,12 @@ import {
 import "./style.css";
 
 const TEXTS = [
-  { target: ".intro__text-1-line-1", width: 500 },
-  { target: ".intro__text-1-line-2", width: 660 },
-  { target: ".intro__text-1-line-3", width: 520 },
-  { target: ".intro__text-2-highlight", width: 426 },
-  { target: ".intro__text-2", width: 390 },
-  { target: ".intro__text-3-line-1", width: 360 },
-  { target: ".intro__text-3-line-2", width: 480 },
+  ".intro__text-1",
+  ".intro__text-2",
+  ".intro__text-3",
+  ".intro__text-4",
+  ".intro__text-5",
+  ".intro__text-6",
 ];
 
 export const showIntro = () => {
@@ -31,6 +30,16 @@ export const showIntro = () => {
     .add(bacteriaAppear(".intro__bacteria_1"), 0)
     .add(bacteriaAppear(".intro__bacteria_2"), 0.3)
     .add(bacteriaAppear(".intro__bacteria_3"), 0.5)
+    .to(
+      ".intro__text-highlight",
+      {
+        backgroundSize: 407,
+        backgroundPositionX: 0,
+        duration: 0.5,
+        ease: "sine.out",
+      },
+      "-=1"
+    )
     .add(buttonAppear(".intro__button"), "-=0.3")
     .addPause()
     .addLabel("wait")
