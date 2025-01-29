@@ -10,9 +10,11 @@ import {
   getCenter,
   showFoam,
   starShine,
+  showText,
 } from "../utils";
 import "./style.css";
 
+const TEXTS = [".game__message-text-1", ".game__message-text-2"];
 const FULL_TIME = 10;
 const TO_CLEAN = 7;
 let cleaned = 0;
@@ -39,19 +41,19 @@ export const startGame = () =>
       timeline.play();
     });
 
+    showText(TEXTS, timeline, 0.5);
     timeline
-      .add(bacteriaAppear(".game__bacteria_1"))
+      .add(bacteriaAppear(".game__bacteria_1"), 0)
       .to(
-        ".game__message",
+        ".game__message-bg",
         {
-          height: 204,
+          scaleY: 1,
           borderRadius: 30,
           ease: "sine.out",
           duration: 0.5,
         },
         "<0.3"
-      )
-      .to(".game__message-text", { height: 92, duration: 0.3 }, "<0.1")
+      )      
       .to(".game__message-arrow", { scale: 1, duration: 0.3 }, "<0.1")
       .addPause()
       .to(".game__message", { opacity: 0, duration: 0.3 })
@@ -64,7 +66,7 @@ export const startGame = () =>
           ease: "none",
         }),
         gsap.to(".game__time-progress", {
-          width: 0,
+          x: '100%',
           duration: FULL_TIME,
           ease: "none",
         }),
@@ -75,7 +77,10 @@ export const startGame = () =>
       timeline.add(bacteriaAppear(target), position);
       handleClick(bacteriaLoop(target).targets()[0], (bacteria) => {
         showFoam(addElementTo("foam", "game-container", getCenter(bacteria)));
-        starShine(addElementTo("star", "game-container", getCenter(bacteria)), .8);
+        starShine(
+          addElementTo("star", "game-container", getCenter(bacteria)),
+          0.8
+        );
 
         const dirt = target.replace("game__bacteria_", "dirt-");
         fadeOut(dirt, 0.3);

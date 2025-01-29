@@ -1,13 +1,13 @@
 import { Timeline } from "gsap/gsap-core";
 import { textAppear, textDisappear } from "./tweens";
 
-export const showText = (data, timeline) => {
+export const showText = (data, timeline, offset = 0) => {
   const tl = timeline ?? new Timeline();
 
   var l = data.length;
   for (let i = 0; i < l; i++) {
-    tl.add(textAppear(data[i]), i * 0.3);
-    tl.add(textAppear(`${data[i]}-mask`), i * 0.3);
+    tl.add(textAppear(data[i]), offset + i * 0.3);
+    tl.add(textAppear(`${data[i]}-mask`), offset + i * 0.3);
   }
 
   return tl;

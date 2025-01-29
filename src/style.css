@@ -89,6 +89,7 @@ body {
 }
 
 .button {
+  user-select: none;
   margin-top: 48px;
   display: flex;
   align-items: center;

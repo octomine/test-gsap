@@ -214,15 +214,13 @@
 }
 
 .game__message {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 25px;
     padding: 0 44px;
     width: 708px;
-    height: 0;
-    background: #006822CC;
-    border-radius: 0;
-    backdrop-filter: blur(10px);
+    height: 204px;
 }
 
 @media screen and (width<1332px) {
@@ -231,10 +229,12 @@
     }
 }
 
-.game__message-text {
-    width: 520px;
-    height: 0;
-    background: url('/assets/init-text.png') center no-repeat;
+.game__message-bg {
+    left: 0;
+    background: #006822CC;
+    border-radius: 0;
+    backdrop-filter: blur(10px);
+    transform: scaleY(0);
 }
 
 .game__message-arrow {
@@ -249,6 +249,7 @@
     position: absolute;
     display: flex;
     justify-content: end;
+    overflow: hidden;
     bottom: -50px;
     width: 1018px;
     height: 36px;

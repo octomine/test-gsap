@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>test gsap</title>
 </head>
@@ -39,8 +38,20 @@
         </div>
         <div class="game__ui-wrapper">
           <div class="game__message">
+            <div class="pa game__message-bg"></div>
             <div class="game__message-arrow"></div>
-            <div class="game__message-text"></div>
+            <div>
+              <div class="mask game__message-text-1-mask">
+                <div class="txt s game__message-text-1">
+                  Нажимай на бактерии,
+                </div>
+              </div>
+              <div class="mask game__message-text-2-mask">
+                <div class="txt s game__message-text-2">
+                  чтобы очистить дом
+                </div>
+              </div>
+            </div>
           </div>
           <div class="game__time-bar">
             <div class="game__time-progress"></div>
