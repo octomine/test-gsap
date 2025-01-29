@@ -41,8 +41,6 @@
 .intro__text-5,
 .intro__text-6 {
     padding: 0 15px;
-    width: fit-content;
-    transform: translateX(100%);
 }
 
 .intro__text-highlight {
@@ -55,14 +53,5 @@
 }
 
 .intro__button {
-    margin-top: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 535px;
-    height: 150px;
-    border-radius: 20px;
-    background: #D21A23;
     transform: translateX(15px) scale(0);
-    transform-origin: center;
 }

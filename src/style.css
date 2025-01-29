@@ -88,6 +88,18 @@ body {
   background-image: url('/assets/bacteria-6.png');
 }
 
+.button {
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 535px;
+  height: 150px;
+  border-radius: 20px;
+  background: #D21A23;
+  transform-origin: center;
+}
+
 .spray-holder {
   pointer-events: none;
   position: relative;
@@ -130,6 +142,18 @@ body {
   color: white;
 }
 
+.xxxl {
+  font-size: 100px;
+}
+
+.xxl {
+  font-size: 73px;
+}
+
+.xl {
+  font-size: 59px;
+}
+
 .l {
   font-size: 55px;
 }
@@ -142,8 +166,17 @@ body {
   font-size: 44px;
 }
 
+.xs {
+  font-size: 40px;
+}
+
 .mask {
   overflow: hidden;
   width: fit-content;
   transform: translateX(-100%);
+}
+
+.mask>.txt {
+  width: fit-content;
+  transform: translateX(100%);
 }

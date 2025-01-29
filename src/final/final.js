@@ -5,17 +5,17 @@ import { addElementTo, buttonAppear, showText, starShine } from "../utils";
 
 const SUCCESS = [
   ".final__success-text-1",
-  ".final__success-text-2_line-1",
-  ".final__success-text-2_line-2",
+  ".final__success-text-2",
   ".final__success-text-3",
+  ".final__success-text-4",
 ];
 
 const FAIL = [
-  ".final__fail-text-1_line-1",
-  ".final__fail-text-1_line-2",
-  ".final__fail-text-2_line-1",
-  ".final__fail-text-2_line-2",
+  ".final__fail-text-1",
+  ".final__fail-text-2",
   ".final__fail-text-3",
+  ".final__fail-text-4",
+  ".final__fail-text-5",
 ];
 
 export const showFinal = (success) => {
