@@ -28,8 +28,9 @@ export const hideText = (data, timeline, label) => {
 export const showFoam = (target, callBack) =>
   new Timeline()
     .set(target, { scale: 0 })
-    .to(target, { scale: 1, duration: 0.1, ease: "exp.in" })
-    .to(target, { y: 300, opacity: 0, duration: 1, ease: "sine.out" })
+    .to(target, { scale: 1, duration: 0.5, ease: "exp.in" })
+    .to(target, { y: 300, duration: 1.2, ease: "sine.out" }, 0.3)
+    .to(target, { opacity: 0, duration: 1.2, ease: "none" }, 0.3)
     .then((timeline) => {
       timeline.kill();
       target.offsetParent.removeChild(target);
