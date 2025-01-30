@@ -162,6 +162,34 @@ export const resizables = {
     width: 91,
     height: 433,
   },
+  game__bacteria_1: {
+    top: 250,
+    left: 0,
+  },
+  game__bacteria_2: {
+    top: 400,
+    left: 300,
+  },
+  game__bacteria_3: {
+    top: 50,
+    left: 480,
+  },
+  game__bacteria_4: {
+    top: 150,
+    left: 870,
+  },
+  game__bacteria_5: {
+    top: 250,
+    left: 1100,
+  },
+  game__bacteria_6: {
+    top: 105,
+    left: 1520,
+  },
+  game__bacteria_7: {
+    top: 300,
+    left: 1800,
+  },
   game__message: {
     width: 708,
     height: 204,

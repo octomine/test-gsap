@@ -12,6 +12,7 @@
             rgba(0, 69, 47, 0.87) 75%,
             rgba(0, 69, 47, 0.2) 100%),
         url('/assets/tile.svg') center;
+    background-size: contain, 100px;
 }
 
 .final__foam {
@@ -19,7 +20,6 @@
     top: 0;
     width: 100%;
     background: url('/assets/final-foam.png') no-repeat center;
-    background-size: contain;
     transform: translateY(-100%)
 }
 

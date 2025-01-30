@@ -68,9 +68,20 @@ export const showIntro = () => {
       { scale: 1, x: 0, y: 0, duration: 0.7, ease: "sine.out" },
       "wait+=0.8"
     );
-  hideText(TEXTS.reverse(), timeline, "wait").set("#intro", {
-    display: "none",
-  });
+  hideText(TEXTS.reverse(), timeline, "wait")
+    .to(
+      ".intro__text-highlight",
+      {
+        backgroundSize: 0,
+        backgroundPositionX: '100%',
+        duration: 0.5,
+        ease: "sine.out",
+      },
+      "-=1.2"
+    )
+    .set("#intro", {
+      display: "none",
+    });
 
   handleClick(
     timeline.getTweensOf(".intro__button")[0].targets()[0],
