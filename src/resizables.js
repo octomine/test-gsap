@@ -162,4 +162,33 @@ export const resizables = {
     width: 91,
     height: 433,
   },
+  game__message: {
+    width: 708,
+    height: 204,
+  },
+  "game__message-arrow": {
+    width: 57,
+    height: 93,
+  },
+  "game__time-bar": {
+    bottom: -50,
+    width: 1018,
+    height: 36,
+    borderRadius: 18,
+  },
+  "game__time-progress": {
+    borderRadius: 18,
+  },
+  "final__animation-holder": {
+    paddingTop: 150,
+    width: 980,
+  },
+  'spray-holder': {
+    width: 1080,
+  },
+  spray: {
+    bottom: 17,
+    width: 371,
+    height: 749,
+  }
 };
