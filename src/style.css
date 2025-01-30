@@ -24,16 +24,39 @@ body {
   transform-origin: left top;
 }
 
-.pa {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
+@media (min-aspect-ratio: 16/9) {
+  #container {
+    width: 177.77vh;
+    height: 100vh;
+  }
+
+  #content {
+    width: 133.33vh;
+    height: 100vh;
+  }
 }
 
-@media screen and (width < 1080px) {
+@media (max-aspect-ratio: 16/9) and (min-aspect-ratio: 4/3) {
+  #container {
+    width: 100vw;
+    height: 100vh;
+  }
+
   #content {
-    aspect-ratio: 4/3;
+    width: 133.33vh;
+    height: 100vh;
+  }
+}
+
+@media (max-aspect-ratio: 4/3) {
+  #container {
+    width: 100vw;
+    height: 75vw;
+  }
+
+  #content {
+    width: 100vw;
+    height: 75vw;
   }
 }
 
@@ -90,12 +113,9 @@ body {
 
 .button {
   user-select: none;
-  margin-top: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 535px;
-  height: 150px;
   border-radius: 20px;
   background: #D21A23;
   transform-origin: center;
@@ -138,37 +158,16 @@ body {
   background: url('/assets/star.svg');
 }
 
+.pa {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .txt {
   font-family: 'Gotham Pro';
   color: white;
-}
-
-.xxxl {
-  font-size: 100px;
-}
-
-.xxl {
-  font-size: 73px;
-}
-
-.xl {
-  font-size: 59px;
-}
-
-.l {
-  font-size: 55px;
-}
-
-.m {
-  font-size: 51px;
-}
-
-.s {
-  font-size: 44px;
-}
-
-.xs {
-  font-size: 40px;
 }
 
 .mask {

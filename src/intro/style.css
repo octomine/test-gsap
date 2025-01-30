@@ -10,28 +10,19 @@
 .intro__bacteria-holder {
     position: absolute;
     top: 0;
-    width: 1080px;
-    height: 621px;
     overflow: hidden;
 }
 
 .intro__bacteria_1 {
-    top: 430px;
     left: 75%;
 }
 
 .intro__bacteria_2 {
-    top: 270px;
     left: 62%;
 }
 
 .intro__bacteria_3 {
-    top: 180px;
     left: 82%;
-}
-
-.intro__animation-holder {
-    width: 980px;
 }
 
 .intro__text-1,

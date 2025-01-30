@@ -18,6 +18,7 @@
     width: 2504px;
     height: 100%;
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .game-container__bg_clear {
@@ -26,126 +27,69 @@
 
 .dirt {
     position: absolute;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .dirt-1-1 {
-    left: 31px;
-    top: 261px;
-    width: 145px;
-    height: 258px;
-    background: url('/assets/dirt-1-1.jpg') center no-repeat;
+    background-image: url('/assets/dirt-1-1.jpg');
 }
 
 .dirt-1-2 {
-    left: 225px;
-    top: 102px;
-    width: 170px;
-    height: 176px;
-    background: url('/assets/dirt-1-2.jpg') center no-repeat;
+    background-image: url('/assets/dirt-1-2.jpg');
 }
 
 .dirt-2-1 {
-    left: 434px;
-    top: 417px;
-    width: 148px;
-    height: 77px;
-    background: url('/assets/dirt-2-1.jpg') center no-repeat;
+    background-image: url('/assets/dirt-2-1.jpg');
 }
 
 .dirt-2-2 {
-    left: 612px;
-    top: 302px;
-    width: 166px;
-    height: 72px;
-    background: url('/assets/dirt-2-2.jpg') center no-repeat;
+    background-image: url('/assets/dirt-2-2.jpg');
 }
 
 .dirt-3-1 {
-    left: 461px;
-    top: 127px;
-    width: 427px;
-    height: 167px;
-    background: url('/assets/dirt-3-1.jpg') center no-repeat;
+    background-image: url('/assets/dirt-3-1.jpg');
 }
 
 .dirt-4-1 {
-    left: 888px;
-    top: 52px;
-    width: 277px;
-    height: 236px;
-    background: url('/assets/dirt-4-1.jpg') center no-repeat;
+    background-image: url('/assets/dirt-4-1.jpg');
 }
 
 .dirt-4-2 {
-    left: 778px;
-    top: 302px;
-    width: 387px;
-    height: 61px;
-    background: url('/assets/dirt-4-2.jpg') center no-repeat;
+    background-image: url('/assets/dirt-4-2.jpg');
 }
 
 .dirt-4-3 {
-    left: 1128px;
-    top: 431px;
-    width: 37px;
-    height: 147px;
-    background: url('/assets/dirt-4-3.jpg') center no-repeat;
+    background-image: url('/assets/dirt-4-3.jpg');
 }
 
 .dirt-4-4 {
-    left: 826px;
-    top: 363px;
-    width: 50px;
-    height: 140px;
-    background: url('/assets/dirt-4-4.jpg') center no-repeat;
+    background-image: url('/assets/dirt-4-4.jpg');
 }
 
 .dirt-5-1 {
-    left: 1281px;
-    top: 225px;
-    width: 96px;
-    height: 92px;
-    background: url('/assets/dirt-5-1.jpg') center no-repeat;
+    background-image: url('/assets/dirt-5-1.jpg');
 }
 
 .dirt-5-2 {
-    left: 1361px;
-    top: 324px;
-    width: 81px;
-    height: 118px;
-    background: url('/assets/dirt-5-2.jpg') center no-repeat;
+    background-image: url('/assets/dirt-5-2.jpg');
 }
 
 .dirt-5-3 {
-    left: 1400px;
-    top: 493px;
-    width: 42px;
-    height: 75px;
-    background: url('/assets/dirt-5-3.jpg') center no-repeat;
+    background-image: url('/assets/dirt-5-3.jpg');
 }
 
 .dirt-6-1 {
-    left: 1488px;
-    top: 10px;
-    width: 199px;
-    height: 228px;
-    background: url('/assets/dirt-6-1.jpg') center no-repeat;
+    background-image: url('/assets/dirt-6-1.jpg');
 }
 
 .dirt-6-2 {
-    left: 1570px;
-    top: 273px;
-    width: 61px;
-    height: 82px;
-    background: url('/assets/dirt-6-2.jpg') center no-repeat;
+    background-image: url('/assets/dirt-6-2.jpg');
 }
 
 .dirt-7-1 {
-    left: 1872px;
-    top: 105px;
-    width: 91px;
-    height: 433px;
-    background: url('/assets/dirt-7-1.jpg') center no-repeat;
+    background-image: url('/assets/dirt-7-1.jpg');
 }
 
 .game__bacteria-holder {
