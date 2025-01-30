@@ -183,12 +183,15 @@ export const resizables = {
     paddingTop: 150,
     width: 980,
   },
-  'spray-holder': {
+  final__foam: {
+    height: 312,
+  },
+  "spray-holder": {
     width: 1080,
   },
   spray: {
     bottom: 17,
     width: 371,
     height: 749,
-  }
+  },
 };
