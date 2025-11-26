@@ -5,6 +5,8 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  root: '.',
+  base: '/test-gsap/',
   build: {
     cssCodeSplit: true,
   },
